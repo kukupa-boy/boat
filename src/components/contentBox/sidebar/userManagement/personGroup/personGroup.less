@@ -1,0 +1,263 @@
+.personGroupBox {
+    position: relative;
+    // background-color: rgb(145, 167, 226);
+    height: 100%;
+    width: 100%;
+    // padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.thehead{
+    height: 60px;
+    position: relative;
+        line-height: 60px;
+    >div{
+        display: inline-block;
+    }
+    >.th-search{
+        margin-left: 30px;
+        width: 360px;
+    }
+    >.th-add{
+        position: absolute;
+        right: 30px;
+    }
+}
+.thebody{
+    width: 100%;
+    text-align: left;
+    td{
+        padding: 4px 0!important;
+    }
+    button{
+        margin: 0;
+    }
+    i{
+        display: inline-block;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        border: 2px solid #ccc;
+        font-size: 18px;
+        text-align: center;
+        color: #aaa;
+        line-height: 20px;
+    }
+    .icon-39{
+        font-size: 12px;
+        border: 2px solid rgb(236, 72, 72);
+        color: rgb(236, 72, 72);
+        &:hover{
+            border: 2px solid rgb(182, 42, 42);
+            color: rgb(182, 42, 42);
+        }
+    }
+    .icon-2{
+        font-size: 14px;
+        border: 2px solid rgb(62, 111, 245);
+        color: rgb(62, 111, 245);
+        &:hover{
+            border: 2px solid rgb(48, 66, 228);
+            color: rgb(48, 66, 228);
+        }
+    }
+    .icon-48{
+        font-size: 14px;
+        border: 2px solid rgb(100, 201, 75);
+        color: rgb(100, 201, 75);
+        &:hover{
+            border: 2px solid rgb(107, 173, 91);
+            color: rgb(107, 173, 91);
+        }
+    }
+    .icon--2{
+        font-size: 16px;
+        &:hover{
+            color: rgb(199, 71, 71);
+            border: 2px solid rgb(199, 71, 71);
+        }
+    }
+    .fa-times{
+        border: 2px solid orange;
+        color: orange;
+    }
+    .fa-lock{
+        border: 2px solid rgb(123, 207, 98);
+        color: rgb(123, 207, 98);
+        &:hover{
+            color: rgb(86, 175, 35);
+        }
+    }
+    .isban{
+        border-color: #ccc;
+        color: #ccc;
+        &:hover{
+            color: #ccc;
+        }
+    }
+}
+
+.thefoot{
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+
+// icon--
+.rootManageCan{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    >.rootBox{
+        width: 97%;
+        height: 94%;
+        position: relative;
+        top: 30px;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px rgb(151, 151, 151);
+        >.rb-head{
+            position: relative;
+            height: 40px;
+            background-color: rgb(79, 122, 241);
+            >span{
+                line-height: 40px;
+                color: #eee;
+                margin-left: 20px;
+            }
+            >i{
+                position: absolute;
+                right: 10px;
+                color: #eee;
+                top: 10px;
+                &:hover{
+                    color: rgb(255, 255, 255);
+                    transform: scale(1.2);
+                }
+            }
+        }
+        
+        .rb-body2{
+            position: relative;
+            height: 60%;
+            >p{
+                line-height: 36px;
+                user-select: none;
+                height: 36px;
+                margin-left: 30px;
+                font-size: 18px;
+                color: #aaa;
+                >.checkedAll{
+                    color: rgb(68, 120, 233);
+                }
+            }
+            
+            >.rb-rootCan{
+                user-select: none;
+                height: 90%;
+                overflow-y: scroll;
+                margin:  0 30px;
+                p{
+                    cursor: pointer;
+                }
+                .child_deep1{
+                    margin-left: 30px;
+                    line-height: 30px;
+                    padding: 4px;
+                    border-radius: 16PX 0 0 16PX;
+                    background-color: rgb(243, 243, 243);
+                    color: rgb(77, 77, 77);
+                    margin-top: 8PX;
+                    .child_deep2{
+                        // display: inline-block;
+                        padding: 4px;
+                        line-height: 30px;
+                        vertical-align: top;
+                        margin-left: 32px;
+                        border-radius: 16PX 0 0 16PX;
+                        margin-top: 8PX;
+                        background-color: rgb(228, 228, 228);
+                        .child_deep3{
+                            line-height: 20px;
+                            display: inline-block;
+                            margin-left: 36px;
+                        }
+                    }
+                }
+                >.rbr-end{
+                    text-align: center;
+                    height: 40px;
+                    padding-left: 30px;
+                    line-height: 40px;
+                    color: #aaa;
+                }
+            }
+        }
+        >.rb-foot{
+            position: absolute;
+            bottom: 10px;
+            right: 30px;
+            text-align: right;
+            margin-top: 30px;
+            padding: 16px 0;
+            >div{
+                display: inline-block;
+                >div{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin: 0 40px;
+                }
+            }
+        }
+        .isBasicRoot{
+            border: 1px solid rgb(68, 120, 233);
+            border-radius: 16px;
+            padding: 4px 8px;
+            color: rgb(68, 120, 233);
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+        .isChecked{
+            color: rgb(255, 255, 255);
+            border: 1px solid rgb(68, 120, 233);
+            background-color: rgb(68, 120, 233);
+        }
+    }
+}
+
+
+
+.slotBody{
+    >div{
+        margin: 16px 0;
+        font-size: 0;
+        box-sizing: border-box;
+        padding: 0 5%;
+        >*{
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        >span{
+            display: inline-block;
+            width: 24%;
+        }
+        >div{
+            display: inline-block;
+            width: 62%;
+            margin-left: 4%;
+        }
+    }
+    >.sb-describe{
+        textarea{
+            border-radius: 16px;
+        }
+    }
+}

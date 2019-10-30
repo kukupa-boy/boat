@@ -1,0 +1,329 @@
+// 一下变量作用于功能按键的样式
+@fontC:rgb(99, 99, 99);//字体颜色
+@fontCH:rgb(66, 66, 66);//鼠标移入颜色
+@fontCH_del:rgb(236, 62, 62);//特殊颜色 删除
+@fontCH_suc:rgb(46, 173, 84);//特殊颜色 成功
+@fontCC:rgb(255, 255, 255);//选中后字体颜色
+@bgC:rgba(255, 255, 255, 0.6);//背景大盒子颜色
+@boxbgC:rgb(255, 255, 255);//盒子颜色
+@boxbgCH:rgb(124, 175, 243);//鼠标移入后盒子背景颜色
+
+@leftLineC:rgb(108, 149, 224);
+// 大盒子
+.div_btn {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 800;
+    bottom: 60px;
+    text-align: left;
+    >div{
+        display: inline-block;
+    }
+  }
+  
+
+// 测距工具样式
+.map-measure {
+    position: relative;
+    background-color: @bgC;
+    border-radius: 16px;
+    text-align: left;
+    font-size: 16px;
+    color: @fontC;
+    >p{
+        background-color: @boxbgC;
+        border-radius: 10px;
+        margin: 8px 4px;
+        text-align: center;
+        >span{
+            display: inline-block;
+            width: 30px;
+            // padding: 6px;
+        }
+        &:hover{
+            color: @fontCH;
+        }
+    }
+    >.ceju_remove{
+        &:hover{
+            color: @fontCH_del;
+        }
+    }
+    >.checked{
+        background-color: @boxbgCH;
+        >span{
+            color: @fontCC;
+        }
+    }
+}
+
+
+  
+//添加点、线、面
+.map-draw{
+    >div{//map-area、map-line、map-point
+        background-color: @bgC;
+        display: inline-block;
+        position: relative;
+        border-radius: 16px;
+        color: @fontC;
+        padding: 4px;
+        margin: 8px 0;
+        font-size: 16px;
+        height: 98px;
+        width: 22px;
+        transition: 0.3s;
+        overflow: hidden;
+        >div{
+            position: absolute;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+        }
+        >.map-info{
+            text-align: center;
+            border-radius: 10px;
+            padding: 2px;
+            margin-bottom: 6px;
+            >i{
+                transition: 0.5s;
+                &:hover{
+                    // transform: rotate(30deg);
+                    transform: scale(1.2);
+                    color:@fontCH;
+                }
+            }
+            >.i-open{
+                transform: scale(1.3) rotate(180deg)!important;
+                color: rgb(43, 87, 231)!important;
+            }
+            >span{
+                display: block;
+                margin-top: 6px;
+                font-size: 14px;
+                writing-mode : tb-rl;
+                letter-spacing: 6px;
+            }
+        }
+        >.map-btn{
+            left: 30px;
+            border-left: 1px solid rgb(192, 192, 192);
+            padding-left: 4px;
+            >p{
+                margin-top: 10px;
+                display: block;
+                width: 22px;
+                height: 22px;
+                background-color: @boxbgC;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 22px;
+                color: @fontC;
+                // &:not(.drawDel){
+                //     margin-bottom: 4px;
+                // }
+                &:hover{
+                    background-color: @boxbgCH;
+                    color: @fontCC;
+                }
+            }
+        }
+        &:hover{
+            width: 54px;
+        }
+    }
+    .open{
+        width: 54px;
+    }  
+}
+
+
+@tollBtn-height:26px;
+// 气象 +  辅助工具 + 区域回放
+.map-weather,.map-tool,.map-areaplay{
+    background-color: @bgC;
+    padding: 6px;
+    border-radius: 16px;
+    margin-top: 10px;
+    line-height: @tollBtn-height;
+    cursor: pointer;
+    text-align: left;
+    >p{
+        text-align: center;
+        padding:0 4px;
+        min-width: 32px;
+        height: @tollBtn-height;
+        background-color: #fff;
+        border-radius: 16px;
+        border: none;
+        display: inline-block;
+        margin: 2px 1px;
+        &:hover{
+            background-color: @boxbgCH;
+            color: @fontCC;
+        }
+    }
+    >.btn-selected{
+        background-color: @boxbgCH;
+        color: @fontCC;
+    }
+}
+.map-weather{
+    width: 90px;
+}
+.map-tool{
+    width: 90px;
+}
+
+// 图源切换
+.changeMap{
+    z-index: 1000;
+    opacity: 0.3;
+    // background-color: #00f;
+    position: absolute;
+    bottom: 10px;
+    right: 160px;
+    // overflow: hidden;
+    width: 74px;
+    height: 58px;
+    transition: 0.3s;
+    >div{
+        position: absolute;
+        transition: 0.3s;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 74px;
+        height: 58px;
+        top: 0;
+        &:nth-of-type(1){
+            right: 0;
+        }
+        &:nth-of-type(2){
+            right: 15px;
+        }
+        &:nth-of-type(3){
+            right: 30px;
+        }
+        >span{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 20px;
+            line-height: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            bottom: 0;
+            color: #fff;
+        }
+    }
+    >.nowShow{
+        z-index: 999;
+    }
+    &:hover{
+        width: 242px;
+        opacity: 1;
+        >div{
+            &:nth-of-type(1){
+                right: 0;
+            }
+            &:nth-of-type(2){
+                right: 84px;
+            }
+            &:nth-of-type(3){
+                right: 168px;
+            }
+        }
+    }
+}
+
+// 测试，可删
+.ls{
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    z-index: 999;
+}
+
+
+
+.hintBox{
+    position: absolute;
+    left: 60px;
+    z-index: 999;
+    top: 0px;
+    width: 300px;
+    background-color: #f00;
+}
+
+
+
+
+// 监视信息面板
+.watchPanel{
+    position: absolute;
+    bottom: 10px;
+    left: 120px;
+    // width: 300px;
+    user-select: none;
+    z-index: 999;
+    >div{
+        display: inline-block;
+        margin: 0 10px;
+        padding: 6px;
+        border-radius: 6px;
+        height:72px;
+        vertical-align: top;
+    }
+    >.wp-numPanel{
+        background-color: rgba(245, 245, 245, 0.8);
+        >div{//wp-danger层级
+            height: 24px;
+            line-height: 24px;
+            .wp-update{
+                color: rgb(126, 126, 126);;
+            }
+        }
+        >.wp-danger{
+            .wp-shipNum{
+                color: red;;
+            }
+        }
+        >.wp-warning{
+            .wp-shipNum{
+                color: rgb(231, 131, 0);;
+            }
+        }
+        >.wp-oversee{
+            .wp-shipNum{
+                color: rgb(118, 182, 0);;
+            }
+        }
+    }
+    >.wp-infoPanel{
+        background-color: rgba(245, 245, 245, 0.8);
+        font-size: 12px;
+        >div{
+            height: 100%;
+            overflow-y: scroll;
+            >.isEmpty{
+                line-height: 72px;
+                width: 260px;
+                text-align: center;
+            }
+        }
+        // .wp-more{
+        //     color: rgb(133, 133, 133);
+        //     text-decoration: underline;
+        //     cursor: pointer;
+        //     &:hover{
+        //         color: rgb(42, 134, 255);
+        //     }
+        // }
+    }
+}
+.a_mmsi {
+    margin: 0 2px;
+    cursor: pointer;
+    color: rgb(31, 121, 255);
+    text-decoration: underline;
+  }

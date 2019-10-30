@@ -1,0 +1,174 @@
+.deviceManageBoxBg{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px 6%;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+.deviceManageBox {
+    position: relative;
+    background-color:white;
+    height: 100%;
+    width: 100%;
+    // padding: 0 20px;
+    // margin:20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.thehead{
+    height: 60px;
+    position: relative;
+        line-height: 60px;
+    >div{
+        display: inline-block;
+    }
+    >.th-search{
+        margin-left: 30px;
+        width: 360px;
+    }
+    >.th-add{
+        position: absolute;
+        right: 30px;
+    }
+}
+
+.thebody{
+    width: 100%;
+    button{
+        margin: 0;
+    }
+    .oprate{
+        i{
+            display: inline-block;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            border: 2px solid #ccc;
+            font-size: 18px;
+            text-align: center;
+            color: #aaa;
+            line-height: 20px;
+            transition: 0.3s;
+        }
+        .icon-48{
+            font-size: 14px;
+            border: 2px solid rgb(100, 201, 75);
+            color: rgb(100, 201, 75);
+            &:hover{
+                border: 2px solid rgb(107, 173, 91);
+                color: rgb(107, 173, 91);
+            }
+        }
+        .icon--2{
+            font-size: 16px;
+            &:hover{
+                color: rgb(199, 71, 71);
+                border: 2px solid rgb(199, 71, 71);
+            }
+        }
+    }
+    .imageCan{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+        height:30px;
+        >img{
+            display: inline-block;
+            height: 30px;
+            margin: 0 4px;
+        }
+    }
+    .fa-qrcode{
+        font-size: 20px;
+        color: #aaa;;
+    }
+    .fa-picture-o{
+        font-size: 18px;
+        color: #aaa;;
+    }
+}
+
+
+.thefoot{
+    position: absolute;
+    bottom: 16px;
+    right: 60px;
+}
+
+.oprate{
+    >span{
+        display: inline-block;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        border: 2px solid #ccc;
+        font-size: 18px;
+        text-align: center;
+        color: #aaa;
+        line-height: 20px;
+    }
+    >.fa-times{
+        border: 2px solid orange;
+        color: orange;
+    }
+}
+
+.slotBody{
+    >div{
+        margin: 16px 0;
+        font-size: 0;
+        box-sizing: border-box;
+        padding: 0 5%;
+        >*{
+            font-size: 16px;
+            vertical-align: middle;
+        }
+        >span{
+            display: inline-block;
+            width: 24%;
+        }
+        >div{
+            display: inline-block;
+            width: 62%;
+            margin-left: 4%;
+        }
+    }
+    >.sb-file{
+        >div{
+            text-align: left;
+        }
+    }
+    >.sb-describe{
+        textarea{
+            border-radius: 16px;
+        }
+    }
+}
+
+.bigImgWall{
+    position: absolute;
+    width: 60%;
+    top: 30px;
+    left: 50%;
+    margin-left: -30%;
+    height: auto;
+    border-radius: 8px;
+    // background-color: rgba(0, 0, 0, 0.582);
+    // box-shadow: 1px 1px 2px #aaa;
+    overflow: hidden;
+    z-index: 999;
+    >i{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        color: #fff;
+    }
+    >img{
+        width: 100%;
+    }
+}

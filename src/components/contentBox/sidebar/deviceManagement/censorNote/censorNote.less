@@ -1,0 +1,88 @@
+.censorNoteBoxBg{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 20px 6%;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+.censorNoteBox {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.thehead{
+    height: 60px;
+    position: relative;
+    line-height: 60px;
+    >.th-search{
+        display: inline-block;
+        margin-left: 30px;
+        width: 360px;
+    }
+}
+
+.thebody{
+    width: 100%;
+    button{
+        margin: 0;
+    }
+    i{
+        display: inline-block;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        margin-left: -1px;
+        vertical-align: middle;
+        border: 2px solid #ccc;
+        font-size: 16px;
+        text-align: center;
+        color: #aaa;
+        transition: 0.3s;
+        line-height: 20px;
+        &:hover{
+            color: rgb(173, 72, 72);
+            border: 2px solid rgb(173, 72, 72);
+        }
+    }
+    >.tableLabel{
+        height: 30px;
+        border-bottom: 1px solid #ccc;
+        >span{
+            display: inline-block;
+            height: 100%;;
+            line-height: 30px;
+            margin-left: 30px;
+            font-size: 18px;
+            border-bottom: 10px solid rgb(87, 103, 252);
+        }
+    }
+}
+
+.thefoot{
+    position: absolute;
+    bottom: 16px;
+    right: 60px;
+}
+
+.oprate{
+    >span{
+        display: inline-block;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        border: 2px solid #ccc;
+        font-size: 18px;
+        text-align: center;
+        color: #aaa;
+        line-height: 20px;
+    }
+    >.fa-times{
+        border: 2px solid orange;
+        color: orange;
+    }
+}
